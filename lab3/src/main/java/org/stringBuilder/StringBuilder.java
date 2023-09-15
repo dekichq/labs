@@ -135,7 +135,8 @@ public class StringBuilder {
         return haveSpecialSymbols;
     }
     public void checkPassword() {
-        String password = "QWEzxc123!";
+        Scanner scanner = new Scanner(System.in);
+        String password = scanner.nextLine();
         if(checkSmallLetters(password) && checkCapitalLetters(password) && checkNumbers(password) && checkSpecialSymbols(password) && password.length() >= 8) {
             System.out.println("Пароль задовільняє вимоги!");
         } else {
